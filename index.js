@@ -289,12 +289,12 @@ tech_passport: {
 
 let your_money = +prompt('Заплатите пожайлуста')
 
-if (your_car.price === your_money) {
-    alert('Поздравляю с новой покупкой!')
-} else if (your_car.price > your_money) {
-    alert('Прошу прощения у вас не хватает денег' + " " + '-' + " " +  your_car.price - your_money)
-} else if(your_car.price < your_money){
-    alert(your_money - your_car.price + " " + "-" + " " + 'Вот ваша сдача, поздравляю с новой покупкой!')
+if (findedCar.price === your_money) {
+    alert("Поздравляю с новой покупкой!")
+} else if (findedCar.price > your_money) {
+    let nexvatka = findedCar.price - your_money
+    alert("Прошу прощения" + " " + '-' + " " + `у вас не хватает денег: ${nexvatka}`)
+} else if(findedCar.price < your_money){
+    let sdacha = your_money - findedCar.price
+    alert(`Вот ваша сдача: ${sdacha}` + " " + "-" + " " + ", поздравляю с новой покупкой!")
 }
-
-console.log();
